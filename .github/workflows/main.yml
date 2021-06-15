@@ -10,6 +10,8 @@ jobs:
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: test-myself
+        with:
+          metafile: meta
       - name: Verify ok
         run: |
           echo "VERSION $VERSION"
