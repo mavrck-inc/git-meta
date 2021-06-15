@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  metajob:
+    runs-on: ubuntu-latest
+    name: A job to generate some files man!
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Hello world action step
+        uses: ./ # Uses an action in the root directory
+        id: hello
+      - name: Verify ok
+        run: |
+          echo "VERSION $VERSION"
