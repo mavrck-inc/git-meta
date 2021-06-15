@@ -2,7 +2,7 @@
 
 echo "Hello World"
 
-BRANCH=${git rev-parse --abbrev-ref HEAD}
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
 echo BRANCH
 SHORT_SHA=$(git rev-parse --short HEAD)
 echo SHORT_SHA
