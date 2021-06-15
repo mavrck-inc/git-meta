@@ -2,14 +2,12 @@
 name: 'Git Meta'
 description: 'Creates a /tmp/meta file containing git meta information.'
 inputs:
-  actor:
-    description: 'Actor'
+  metafile:
+    description: 'Meta file path to write the git meta to'
     required: true
-    default: ${{ github.actor }}
-  message:
-    description: 'Commit Message'
-    required: true
-    default: ${{ github.actor }}
+    default: git-meta
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.metafile }}
