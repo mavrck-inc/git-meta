@@ -1,0 +1,6 @@
+# action.yml
+name: 'Git Meta'
+description: 'Creates a /tmp/meta file containing git meta information.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
