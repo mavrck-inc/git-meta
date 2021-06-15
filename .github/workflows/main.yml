@@ -13,3 +13,4 @@ jobs:
       - name: Verify ok
         run: |
           echo "VERSION $VERSION"
+          cat /tmp/meta
