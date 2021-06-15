@@ -20,10 +20,10 @@ fi
 
 echo "VERSION=$(if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then echo `date '+%Y.%m.%d'`-$SHORT_SHA; else echo $BRANCH-$SHORT_SHA; fi)" >> $GITHUB_ENV
 
-echo "authorName=$AUTHOR" > /tmp/meta
-echo "authorEmail=$AUTHOR_EMAIL" >> /tmp/meta
-echo "headRef=$WEBHOOK_HEAD_REF" >> /tmp/meta
-echo "commit=$COMMIT" >> /tmp/meta
-echo "message=$(echo $MESSAGE | tr '\n' ' ' )" >> /tmp/meta
+echo "authorName=$AUTHOR" > meta
+echo "authorEmail=$AUTHOR_EMAIL" >> meta
+echo "headRef=$WEBHOOK_HEAD_REF" >> meta
+echo "commit=$COMMIT" >> meta
+echo "message=$(echo $MESSAGE | tr '\n' ' ' )" >> meta
 
-cat /tmp/meta
+cat meta
