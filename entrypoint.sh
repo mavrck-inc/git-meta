@@ -24,8 +24,8 @@ echo "VERSION=$(if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then echo
 
 echo "Writing to $META_FILE_PATH"
 
-echo "authorName=$AUTHOR" > META_FILE_PATH
-echo "authorEmail=$AUTHOR_EMAIL" >> META_FILE_PATH
-echo "headRef=$WEBHOOK_HEAD_REF" >> META_FILE_PATH
-echo "commit=$COMMIT" >> META_FILE_PATH
-echo "message=$(echo $MESSAGE | tr '\n' ' ' )" >> META_FILE_PATH
+echo "authorName=$AUTHOR" > $META_FILE_PATH
+echo "authorEmail=$AUTHOR_EMAIL" >> $META_FILE_PATH
+echo "headRef=$WEBHOOK_HEAD_REF" >> $META_FILE_PATH
+echo "commit=$COMMIT" >> $META_FILE_PATH
+echo "message=$(echo $MESSAGE | tr '\n' ' ' )" >> $META_FILE_PATH
