@@ -25,3 +25,5 @@ echo "authorEmail=$AUTHOR_EMAIL" >> /tmp/meta
 echo "headRef=$WEBHOOK_HEAD_REF" >> /tmp/meta
 echo "commit=$COMMIT" >> /tmp/meta
 echo "message=$(echo $MESSAGE | tr '\n' ' ' )" >> /tmp/meta
+
+cat /tmp/meta
