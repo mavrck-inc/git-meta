@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-META_FILE_PATH = $1
+META_FILE_PATH=$1
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 SHORT_SHA=$(git rev-parse --short HEAD)
