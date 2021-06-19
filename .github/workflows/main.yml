@@ -9,10 +9,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Test myself
         uses: ./ # Uses an action in the root directory
-        id: test-myself
+        id: meta
         with:
           metafile: meta
       - name: Verify ok
+        id: test-myself
         run: |
-          echo "VERSION $VERSION"
+          echo "VERSION ENV $VERSION"
+          echo "version output: ${{ steps.meta.outputs.version  }}"
           cat meta

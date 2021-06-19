@@ -20,7 +20,10 @@ if [ "$WEBHOOK_HEAD_REF" = "" ] ; then
   export WEBHOOK_HEAD_REF=${WEBHOOK_HEAD_REF#remotes/origin/};
 fi
 
-echo "VERSION=$(if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then echo `date '+%Y.%m.%d'`-$SHORT_SHA; else echo $BRANCH-$SHORT_SHA; fi)" >> $GITHUB_ENV
+VERSION=$(if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then echo `date '+%Y.%m.%d'`-$SHORT_SHA; else echo $BRANCH-$SHORT_SHA; fi)
+
+echo "VERSION=$VERSION" >> $GITHUB_ENV
+echo "::set-output name=version::$VERSION"
 
 echo "Writing to $META_FILE_PATH"
 

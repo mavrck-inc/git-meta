@@ -6,6 +6,10 @@ inputs:
     description: 'Meta file path to write the git meta to'
     required: true
     default: git-meta
+
+outputs:
+  version:
+    description: 'The version of the service'
 runs:
   using: 'docker'
   image: 'Dockerfile'
