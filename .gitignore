@@ -6,5 +6,6 @@ build/
 !.editorconfig
 !.gitignore
 !.github
+!.releaserc.json
 
 out/
