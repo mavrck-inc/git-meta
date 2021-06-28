@@ -1,20 +1,26 @@
-on: [push]
+name: "release"
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  metajob:
+  release:
     runs-on: ubuntu-latest
-    name: A job to generate some files man!
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Test myself
-        uses: ./ # Uses an action in the root directory
-        id: meta
+      - uses: actions/checkout@v2
+
+      - run: git status
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        id: semantic
         with:
-          metafile: meta
-      - name: Verify ok
-        id: test-myself
-        run: |
-          echo "VERSION ENV $VERSION"
-          echo "version output: ${{ steps.meta.outputs.version  }}"
-          cat meta
+          extra_plugins: |
+            @semantic-release/release-notes-generator
+            @semantic-release/changelog
+            @semantic-release/exec
+            @semantic-release/github
+            @semantic-release/git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
