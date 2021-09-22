@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/mavrck-inc/git-meta/compare/1.0.0...1.0.1) (2021-09-22)
+
+
+### Bug Fixes
+
+* **branch:** Sanitize branch name ([db8fa05](https://github.com/mavrck-inc/git-meta/commit/db8fa05a7cdbd4dc734f95d14e20bed0963bf3a1))
+
 # 1.0.0 (2021-06-28)
 
 
