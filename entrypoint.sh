@@ -20,7 +20,8 @@ if [ "$WEBHOOK_HEAD_REF" = "" ] ; then
   export WEBHOOK_HEAD_REF=${WEBHOOK_HEAD_REF#remotes/origin/};
 fi
 
-VERSION=$(if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then echo `date '+%Y.%m.%d'`-$SHORT_SHA; else echo $BRANCH-$SHORT_SHA; fi)
+ESCAPED_BRANCH=$(echo $BRANCH | sed 's/[^a-zA-Z0-9]/_/g')
+VERSION=$(if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then echo `date '+%Y.%m.%d'`-$SHORT_SHA; else echo $ESCAPED_BRANCH-$SHORT_SHA; fi)
 
 echo "VERSION=$VERSION" >> $GITHUB_ENV
 echo "::set-output name=version::$VERSION"
