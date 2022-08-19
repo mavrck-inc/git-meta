@@ -21,8 +21,9 @@ if [ "$WEBHOOK_HEAD_REF" = "" ] ; then
 fi
 
 ESCAPED_BRANCH=$(echo $BRANCH | sed 's/[^a-zA-Z0-9]/_/g')
+VERSION_DATE=$(date '+%Y.%m.%d.%s')
 
-VERSION=$(if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then echo `date '+%Y.%m.%d'`-$SHORT_SHA; else echo $ESCAPED_BRANCH-$SHORT_SHA; fi)
+VERSION=$(if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then $VERSION_DATE-$SHORT_SHA; else echo $ESCAPED_BRANCH-$VERSION_DATE-$SHORT_SHA; fi)
 
 echo "VERSION=$VERSION" >> $GITHUB_ENV
 echo "::set-output name=version::$VERSION"
