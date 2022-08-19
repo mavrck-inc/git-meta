@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/mavrck-inc/git-meta/compare/1.0.1...1.0.2) (2022-08-19)
+
+
+### Bug Fixes
+
+* **branch:** Added seconds from epic to the date part of the version string ([0c617ae](https://github.com/mavrck-inc/git-meta/commit/0c617aec122bb30fccae1d5681687db0a8bdec11))
+
 ## [1.0.1](https://github.com/mavrck-inc/git-meta/compare/1.0.0...1.0.1) (2021-09-22)
 
 
