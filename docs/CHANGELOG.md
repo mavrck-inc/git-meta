@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/mavrck-inc/git-meta/compare/1.0.2...1.0.3) (2022-08-24)
+
+
+### Bug Fixes
+
+* **branch:** Add missing echo when emitting version string for main/master branch ([51ad2c3](https://github.com/mavrck-inc/git-meta/commit/51ad2c38ed0f298a8997f2eeb374522a2c470cc9))
+* **release:** push noop to release ([564ceb3](https://github.com/mavrck-inc/git-meta/commit/564ceb3ad93774775df640d0e4cfb5ff57a7a0c6))
+
 ## [1.0.2](https://github.com/mavrck-inc/git-meta/compare/1.0.1...1.0.2) (2022-08-19)
 
 
