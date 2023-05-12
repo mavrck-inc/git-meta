@@ -11,7 +11,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: actions/setup-node@v3
+      - name: Node Setup
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
 
