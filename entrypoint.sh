@@ -27,6 +27,7 @@ VERSION=$(if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then echo $VERS
 
 echo "VERSION=$VERSION" >> $GITHUB_ENV
 echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+
 echo "Writing to $META_FILE_PATH"
 
 echo "authorName=$AUTHOR" > $META_FILE_PATH
