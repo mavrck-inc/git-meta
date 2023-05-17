@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/mavrck-inc/git-meta/compare/1.0.3...1.0.4) (2023-05-17)
+
+
+### Bug Fixes
+
+* **release:** push noop to release ([b5e8d39](https://github.com/mavrck-inc/git-meta/commit/b5e8d39f1b37871c8274464b261bb970aed015d4))
+
 ## [1.0.3](https://github.com/mavrck-inc/git-meta/compare/1.0.2...1.0.3) (2022-08-24)
 
 
